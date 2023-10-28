@@ -9,7 +9,6 @@
     package:
       name: 
         - htop
-        - nvim
         - git
         - tmux
         - zsh
