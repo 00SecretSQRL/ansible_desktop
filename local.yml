@@ -8,6 +8,6 @@
   - name: Install Docker
     package:
       name: docker.io
-  - name: htop
+    name: htop
     Package:
       name: htop
