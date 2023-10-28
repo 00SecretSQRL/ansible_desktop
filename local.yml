@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+
+  tasks:
+  - name: Install Docker
+    package:
+      name: docker.io
+  - name: htop
+    Package:
+      name: htop
