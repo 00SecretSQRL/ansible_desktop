@@ -5,6 +5,16 @@
 
 
   tasks:
-  - name: htop
+  - name: install stuff
     package:
-      name: htop
+      name: 
+        - htop
+        - nvim
+        - git
+        - tmux
+        - zsh
+        - docker.io
+        - docker-compose
+        - python3-pip
+        - python3-venv
+        - python3-dev
