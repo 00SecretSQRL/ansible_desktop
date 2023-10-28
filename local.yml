@@ -13,6 +13,7 @@
         - tmux
         - zsh
         - vim-nox
+        - python3-psutil
 
   - name: copy wallpaper file
     copy:
