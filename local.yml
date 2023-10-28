@@ -12,5 +12,3 @@
         - git
         - tmux
         - zsh
-        - docker.io
-        - docker-compose
