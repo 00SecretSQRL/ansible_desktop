@@ -1,14 +1,4 @@
 ---
-#! to do list  
-# update the playbook to work with a user variable
-# install nerdfonts
-# install powerlevel10k
-# setup gnome extensions
-# install discord and VSCode
-# install docker
-# configure bashrc file better
-# find other configs that may be needed.
-
 - hosts: localhost
   connection: local
   become: true
@@ -30,9 +20,6 @@
         - docker-ce
         - docker-ce-cli
         - containerd.io
-
-  # - name: Install Oh My Zsh
-  #   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
   - name: Install VSCode
     snap:
@@ -66,10 +53,3 @@
   - name: copy over config files
     ansible.builtin.include_tasks:
       file: tasks/copyconfigs.yml
-
-  - name: get the username running the deploy
-    become: false
-    local_action: command whoami
-    register: username_on_the_host
-
-  - debug: var=username_on_the_host
