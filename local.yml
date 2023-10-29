@@ -3,7 +3,6 @@
   connection: local
   become: true
 
-
   tasks:
   - name: install stuff
     package:
@@ -16,6 +15,17 @@
         - python3-psutil
         - jq
         - curl
+        - qtile
+        - evolution
+        - ranger
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+
+  - name: Install VSCode
+    snap:
+      name: code
+      classic: yes
 
   - name: install python modules
     pip:
