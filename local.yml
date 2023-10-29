@@ -15,7 +15,6 @@
         - python3-psutil
         - jq
         - curl
-        - qtile
         - evolution
         - ranger
         - docker-ce
