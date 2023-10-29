@@ -17,3 +17,14 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+
+    - name: unzip dracula theme
+    unarchive:
+      src: files/gtk-dracula.zip
+      dest: /usr/share/themes/
+  
+  - name: set dracula theme
+    become_user: guye
+    dconf:
+      key: "/org/gnome/desktop/interface/gtk-theme"
+      value: "'gtk-master'"

@@ -79,17 +79,6 @@
       minute: "*/10"
       job: ansible-pull -o -U https://github.com/00SecretSQRL/ansible_desktop.git
 
-  - name: unzip dracula theme
-    unarchive:
-      src: files/gtk-dracula.zip
-      dest: /usr/share/themes/
-  
-  - name: set dracula theme
-    become_user: guye
-    dconf:
-      key: "/org/gnome/desktop/interface/gtk-theme"
-      value: "'gtk-master'"
-
   - name: setup theme
     ansible.builtin.include_tasks:
       file: tasks/theme.yml
