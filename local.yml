@@ -32,7 +32,6 @@
         - bs4
         - lxml
         - pyyaml
-        - json
 
   - name: copy wallpaper file
     copy:
