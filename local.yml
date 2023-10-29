@@ -95,4 +95,4 @@
     become_user: guye
     dconf:
       key: "/org/gnome/desktop/interface/gtk-theme"
-      value: "'Gtk-master'"
+      value: "'gtk-master'"
