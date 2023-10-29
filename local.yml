@@ -67,5 +67,6 @@
   - name: add ansible-pull cron job
     cron:
       name: ansible-pull
+      user: velociraptor
       minute: "*/10"
       job: ansible-pull -o -U https://github.com/00SecretSQRL/ansible_desktop.git
