@@ -45,25 +45,6 @@
         - lxml
         - pyyaml
 
-  - name: copy wallpaper file
-    copy:
-      src: files/wallpaper.png
-      dest: /usr/share/backgrounds/ansible-wallpaper.png
-      owner: root
-      group: root
-
-  - name: set wallpaper
-    become_user: guye
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
-
-  - name: set wallpaper position
-    become_user: guye
-    dconf:
-      key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
-
   - name: copy .bashrc file
     copy:
       src: files/.bashrc
@@ -108,3 +89,6 @@
     dconf:
       key: "/org/gnome/desktop/interface/gtk-theme"
       value: "'gtk-master'"
+
+  - name: Install p10k
+    ansible.builtin.include_tasks: "p10k-install.yml"
