@@ -14,6 +14,10 @@
         - zsh
         - vim-nox
         - python3-psutil
+        - jq
+        - curl
+        - gsnap
+        - gnome-tweaks
 
   - name: copy wallpaper file
     copy:
@@ -49,9 +53,9 @@
       group: guye
 
   -name: add ansible user
-    user:
-      name: velociraptor
-      system: yes
+  user:
+    name: velociraptor
+    system: yes
 
   - name: setup sudo for ansible user
     copy:
