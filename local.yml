@@ -54,8 +54,8 @@
 
   - name: add ansible user
     user:
-    name: velociraptor
-    system: yes
+      name: velociraptor
+      system: yes
 
   - name: setup sudo for ansible user
     copy:
