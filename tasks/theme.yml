@@ -18,7 +18,7 @@
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
 
-    - name: unzip dracula theme
+  - name: unzip dracula theme
     unarchive:
       src: files/gtk-dracula.zip
       dest: /usr/share/themes/
