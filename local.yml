@@ -90,5 +90,5 @@
       key: "/org/gnome/desktop/interface/gtk-theme"
       value: "'gtk-master'"
 
-  - name: Install p10k
-    ansible.builtin.include_tasks: "p10k-install.yml"
+  - name: setup theme
+    ansible.builtin.include_tasks: "wallpaper.yml"
