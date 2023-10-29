@@ -21,8 +21,8 @@
         - docker-ce-cli
         - containerd.io
 
-  - name: Install Oh My Zsh
-    shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+  # - name: Install Oh My Zsh
+  #   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
   - name: Install VSCode
     snap:
