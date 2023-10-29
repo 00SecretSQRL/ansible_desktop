@@ -52,8 +52,8 @@
       owner: guye
       group: guye
 
-  -name: add ansible user
-  user:
+  - name: add ansible user
+    user:
     name: velociraptor
     system: yes
 
