@@ -91,4 +91,5 @@
       value: "'gtk-master'"
 
   - name: setup theme
-    ansible.builtin.include_tasks: "wallpaper.yml"
+    ansible.builtin.include_tasks:
+      file: tasks/theme.yml
