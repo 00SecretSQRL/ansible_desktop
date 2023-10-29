@@ -40,3 +40,10 @@
       dest: /home/guye/.bashrc
       owner: guye
       group: guye
+
+  - name: copy .zshrc file
+    copy:
+      src: files/.zshrc
+      dest: /home/guye/.zshrc
+      owner: guye
+      group: guye
