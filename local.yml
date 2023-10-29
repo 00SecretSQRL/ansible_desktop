@@ -17,6 +17,23 @@
         - jq
         - curl
 
+  - name: install python modules
+  ansible.builtin.pip:
+    name:
+      - psutil
+      - requests
+      - pandas
+      - numpy
+      - matplotlib
+      - seaborn
+      - jupyterlab
+      - rich
+      - selenium
+      - bs4
+      - lxml
+      - pyyaml
+      - json
+
 
   - name: copy wallpaper file
     copy:
