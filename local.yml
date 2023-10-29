@@ -47,3 +47,22 @@
       dest: /home/guye/.zshrc
       owner: guye
       group: guye
+
+  -name: add ansible user
+    user:
+      name: velociraptor
+      system: yes
+
+  - name: setup sudo for ansible user
+    copy:
+      src: files/sudoers_velociraptor
+      dest: /etc/sudoers.d/velociraptor
+      owner: root
+      group: root
+      mode: 0440
+  
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible-pull
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/00SecretSQRL/ansible_desktop.git
