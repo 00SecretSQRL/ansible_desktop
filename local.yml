@@ -18,10 +18,21 @@
         - curl
 
   - name: install python modules
-  pip:
-    name:
-      - psutil
-
+    pip:
+      name:
+        - psutil
+        - requests
+        - pandas
+        - numpy
+        - matplotlib
+        - seaborn
+        - jupyterlab
+        - rich
+        - selenium
+        - bs4
+        - lxml
+        - pyyaml
+        - json
 
   - name: copy wallpaper file
     copy:
