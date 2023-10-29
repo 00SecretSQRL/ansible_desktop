@@ -18,7 +18,7 @@
         - curl
 
   - name: install python modules
-  ansible.builtin.pip:
+  pip:
     name:
       - psutil
       - requests
@@ -33,7 +33,6 @@
       - lxml
       - pyyaml
       - json
-
 
   - name: copy wallpaper file
     copy:
