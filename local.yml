@@ -45,40 +45,14 @@
         - lxml
         - pyyaml
 
-  - name: copy .bashrc file
-    copy:
-      src: files/.bashrc
-      dest: /home/guye/.bashrc
-      owner: guye
-      group: guye
-
-  - name: copy .zshrc file
-    copy:
-      src: files/.zshrc
-      dest: /home/guye/.zshrc
-      owner: guye
-      group: guye
-
-  - name: add ansible user
-    user:
-      name: velociraptor
-      system: yes
-
-  - name: setup sudo for ansible user
-    copy:
-      src: files/sudoer_velociraptor
-      dest: /etc/sudoers.d/velociraptor
-      owner: root
-      group: root
-      mode: 0440
-  
-  - name: add ansible-pull cron job
-    cron:
-      name: ansible-pull
-      user: velociraptor
-      minute: "*/10"
-      job: ansible-pull -o -U https://github.com/00SecretSQRL/ansible_desktop.git
-
   - name: setup theme
     ansible.builtin.include_tasks:
       file: tasks/theme.yml
+
+  - name: setup ansible-pull cron job
+    ansible.builtin.include_tasks:
+      file: tasks/ansiblecron.yml
+
+  - name: copy over config files
+    ansible.builtin.include_tasks:
+      file: tasks/configs.yml
