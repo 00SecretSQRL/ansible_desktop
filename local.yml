@@ -66,3 +66,10 @@
   - name: copy over config files
     ansible.builtin.include_tasks:
       file: tasks/copyconfigs.yml
+
+- name: get the username running the deploy
+  become: false
+  local_action: command whoami
+  register: username_on_the_host
+
+- debug: var=username_on_the_host
