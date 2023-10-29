@@ -16,8 +16,7 @@
         - python3-psutil
         - jq
         - curl
-        - gsnap
-        - gnome-tweaks
+
 
   - name: copy wallpaper file
     copy:
