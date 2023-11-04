@@ -21,6 +21,9 @@
         - docker-ce-cli
         - containerd.io
         - rofi
+        - neofetch
+        - gnome-tweaks
+        - nala
 
   - name: Install VSCode
     snap:

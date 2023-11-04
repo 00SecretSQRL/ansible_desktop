@@ -7,9 +7,9 @@
 # install docker
 # configure bashrc file better
 # find other configs that may be needed.
-# Super + enter for terminal
-# super + shift +  c for close window
-# SUper +shift + q for logout
-# super + space - rofi run
-# super +tab - rofi switch windows
+    # Super + enter for terminal
+    # super + shift +  c for close window
+    # SUper +shift + q for logout
+    # super + space - rofi run
+    # super +tab - rofi switch windows
 # rofi dracula theme
